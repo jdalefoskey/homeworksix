@@ -1,0 +1,13 @@
+body {
+	background-color: cyan;
+}
+
+.historyMain {
+	margin-top: 20px;
+	width: 20%;
+	background-color: darkgray;
+}
+
+.historyHeader {
+	margin-bottom: 10px;
+}
