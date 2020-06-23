@@ -1,4 +1,4 @@
-# Homework Assignment 5: Day Planner
+# Homework Assignment 5: Weather App
 ---
 
 ## Description
