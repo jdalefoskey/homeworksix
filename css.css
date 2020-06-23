@@ -1,0 +1,107 @@
+body {
+	background-color: #ebedeb;
+}
+
+.container {
+	display: grid;
+	width: 100%;
+	height: 600px;
+	grid-template-columns: 200px 1fr 1fr;
+	grid-template-rows: 80px 1fr 1fr 100px;
+	grid-gap: 1rem;
+	grid-template-areas: "header header header" "sidebar content-1 content-1" "sidebar content-2 content-2"
+		"footer footer footer";
+}
+
+.header {
+	border: 1px solid darkgray;
+	box-shadow: 10px 5px 5px gray;
+	letter-spacing: 0.5rem;
+	font-family: 'Anton', sans-serif;
+	padding-top: 15px;
+	text-align: center;
+	justify-content: center;
+	color: white;
+	background-color: #515452;
+	grid-area: header;
+}
+
+.sidebar {
+	padding-left: 5px;
+	border: 1px solid darkgray;
+	box-shadow: 10px 5px 5px gray;
+	background-color: white;
+	grid-area: sidebar;
+}
+
+.content-1 {
+	border: 1px solid darkgray;
+	box-shadow: 10px 5px 5px gray;
+	background-color: white;
+	grid-area: content-1;
+}
+
+.content-2 {
+	padding-left: 15px;
+	border: 1px solid darkgray;
+	box-shadow: 10px 5px 5px gray;
+	background-color: white;
+	grid-area: content-2;
+}
+
+.footer {
+	grid-area: footer;
+}
+
+.historyCity {
+	padding-left: 5px;
+	font-family: 'Play', sans-serif;
+	text-align: left;
+	border: 1px solid black;
+	padding: 5px;
+}
+
+#searchText {
+	font-family: 'Play', sans-serif;
+}
+
+.historyHeader {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-family: 'Play', sans-serif;
+}
+
+#searchBar {
+	border-radius: 10px;
+}
+
+#buttonOne {
+	border-radius: 5px;
+	margin-left: 110px;
+	margin-top: 10px;
+}
+
+#city {
+	font-family: 'Anton', sans-serif;
+}
+
+#currentCity {
+	padding-top: 10px;
+	padding-left: 10px;
+}
+.card {
+	margin-bottom: 10px;
+	margin-right: 10px;
+	float: left;
+	color: white;
+	background-color: #515452;
+}
+.list-group {
+	color: white;
+	background-color: #515452;
+}
+
+.list-group-item {
+	color: white;
+	background-color: #515452;
+}
