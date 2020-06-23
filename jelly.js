@@ -9,8 +9,6 @@ function myFunction() {
 	search(city);
 }
 
-
-
 //this function is called when the search button is clicked
 function search(city) {
 	//prevent the default submit button function
@@ -61,7 +59,7 @@ function search(city) {
 		// retrieve weather icon code.
 		let iconcode = response.weather[0].icon;
 		// url for weather icon image.
-		let iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png"
+		let iconurl = 'http://openweathermap.org/img/w/' + iconcode + '.png';
 
 		// add image src to the weather icon image tag id.
 		let wiconId = document.getElementById('wicon');
@@ -75,10 +73,9 @@ function search(city) {
 	}).then(function(response) {
 		console.log(response);
 		// index to pull out one record per day at 12pm.
-		let responseIndex = [3,11,19,27,35];
+		let responseIndex = [ 3, 11, 19, 27, 35 ];
 		// for loop for the index array.
-		for (let i = 0; i < responseIndex.length; i ++) {
-
+		for (let i = 0; i < responseIndex.length; i++) {
 			// retrieve object for each index in the responseIndex array.
 			let eachResponse = response.list[responseIndex[i]];
 
@@ -90,13 +87,13 @@ function search(city) {
 
 			// weather icon
 			let iconcode = eachResponse.weather[0].icon;
-			let iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png"
+			let iconurl = 'http://openweathermap.org/img/w/' + iconcode + '.png';
 
-			// add these values to their DOM 
-			let date = document.getElementById('card' + (i+1).toString());
-			let temp = document.getElementById('temp' + (i+1).toString());
-			let humid = document.getElementById('hum' + (i+1).toString());
-			let symbId = document.getElementById('symb' + (i+1).toString());
+			// add these values to their DOM
+			let date = document.getElementById('card' + (i + 1).toString());
+			let temp = document.getElementById('temp' + (i + 1).toString());
+			let humid = document.getElementById('hum' + (i + 1).toString());
+			let symbId = document.getElementById('symb' + (i + 1).toString());
 			date.innerHTML = dte;
 			temp.innerHTML = 'Temp: ' + tmp + '˚F';
 			humid.innerHTML = 'Humidity: ' + hmd + '%';
@@ -104,9 +101,6 @@ function search(city) {
 		}
 	});
 }
-
-
-
 
 // this function will create a new div with each history city added
 function showHistory() {
@@ -136,13 +130,13 @@ function showHistory() {
 	// showing the recent 6 search items.
 	for (let i = 0; i < maxList; i++) {
 		// create an item id for each history.
-		let historyId = "historyId" + i.toString();
+		let historyId = 'historyId' + i.toString();
 		// append #history with a div of city names with a DOM ID.
 		$(`<div class="historyCity" id="` + historyId + `"/>`).text(retrieveHistory2[i]).appendTo('#history');
 
 		// add an event listener to each DOM ID.
 		let historyBar = document.getElementById(historyId);
-		historyBar.addEventListener('click', myFunction2) ;  // historyBar.onclick = myFunction2();
+		historyBar.addEventListener('click', myFunction2); // historyBar.onclick = myFunction2();
 	}
 }
 
