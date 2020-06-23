@@ -1,4 +1,4 @@
-# Homework Assignment 5: Weather App
+# Homework Assignment 6: Weather App
 ---
 
 ## Description
