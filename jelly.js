@@ -12,7 +12,7 @@ function myFunction() {
 //this function is called when the search button is clicked
 function search(city) {
 	//prevent the default submit button function
-	event.preventDefault();
+	//event.preventDefault();
 	let retrieveHistory = localStorage.getItem('history');
 	let retrieveHistory2 = JSON.parse(retrieveHistory);
 	//checking to see if array exists, if not create an empty array
